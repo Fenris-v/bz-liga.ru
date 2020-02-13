@@ -1,0 +1,94 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "min-reset"
+
+/* HEADER */
+.logo_bold
+  font-weight: bolder
+  font-family: Arial, sans-serif
+  font-size: 20px
+
+.header_top, .header_fixed__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 0
+
+.header
+  &__nav
+    flex-grow: 1
+
+    ul
+      display: flex
+      justify-content: space-between
+
+
+    a
+      display: block
+      text-transform: uppercase
+      @include font($fontSize: $navSize, $color: $white)
+      @include transition()
+      padding: 10px
+      @include box-sizing()
+
+      &:hover
+        color: $blue
+        +transition()
+
+  &__phone
+    margin-left: 50px
+    @include font($fontSize: $navSize, $fontWeight: bolder, $color: $white)
+    display: inline-block
+
+  &__wrapper
+    background: url("../images/bg_main.jpg") top no-repeat
+    background-size: 100%, contain
+
+  &_fixed
+    transform: translateY(-100%)
+    position: fixed
+    background: $white
+    width: 100%
+
+    .header__nav a, .header__phone
+      color: $textBlack
+
+  &_bottom
+
+    h1
+      background-color: $blue
+      padding: 10px
+      text-transform: uppercase
+      @include font($white, $arialHelvetica, bold, 38px)
+      display: inline-block
+
+  &__subTitle
+    padding: 10px
+    @include font($white, $mainFont, normal, 25px)
+    text-transform: uppercase
+
+.logo
+  margin-right: 50px
+
+.btn_blue
+  padding: 0 20px
+  display: inline-block
+  background: rgb(11,77,197)
+  background: linear-gradient(200deg, rgba(11,77,197,1) 40%, rgba(94,120,249,1) 100%)
+  border-style: solid
+  border-color: $darkBlue
+  border-radius: 50px
+  border-width: 0 0 4px
+  @include font($white, $mainFont, normal, 18px, 45px)
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@import "responsive"
+/* HAMBURGER */
+@import "hamburger"

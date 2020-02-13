@@ -1,0 +1,60 @@
+@import "variables"
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=box-shadow($shadow)
+  -moz-box-shadow: $shadow
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+=transform($transform)
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+  -webkit-transform: $transform
+  transform: $transform
+
+=object-fit($object)
+  -o-object-fit: $object
+  object-fit: $object
+
+//  MIXIN
+@mixin font($color: $textBlack, $family: $mainFont, $fontWeight: normal, $fontSize: $fontSize, $line: 1)
+  font:
+    size: $fontSize
+    weight: $fontWeight
+    family: $family
+  color: $color
+  line-height: $line
+
+@mixin transition($transition: all 0.4s ease 0s)
+  -moz-transition: $transition
+  -o-transition: $transition
+  -webkit-transition: $transition
+  transition: $transition
+
+@mixin box-sizing($box-sizing: border-box)
+  -moz-box-sizing: $box-sizing
+  -webkit-box-sizing: $box-sizing
+  box-sizing: $box-sizing
+
+%zeroPosition
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+%input
+  @include font()
+  border: $textBlack 1px solid
+  +box-shadow(none)
+  height: 40px
+  padding: 15px 20px
+
+  &::placeholder
+    @include font()
+    opacity: 0.6
