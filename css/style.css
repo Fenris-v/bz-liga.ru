@@ -224,6 +224,38 @@ input[type=email] {
   line-height: 1;
   display: inline-block;
 }
+.header_bottom li {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: roboto, sans-serif;
+  color: #ffffff;
+  line-height: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.header_bottom li:before {
+  margin-top: 5px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #0b4dc5;
+  background-size: 100%;
+}
+.header_bottom li:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../images/tick.svg") center no-repeat;
+  top: 2px;
+  left: 2px;
+}
 .header__subTitle {
   padding: 10px;
   font-size: 25px;
@@ -232,6 +264,7 @@ input[type=email] {
   color: #ffffff;
   line-height: 1;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .logo {

@@ -63,10 +63,39 @@
       @include font($white, $arialHelvetica, bold, 38px)
       display: inline-block
 
+    li
+      @include font($white, $mainFont, normal, $navSize, 24px)
+      margin-bottom: 20px
+      display: flex
+      align-items: flex-start
+      position: relative
+
+      &:before
+        margin-top: 5px
+        display: block
+        width: 16px
+        height: 16px
+        content: ""
+        border-radius: 50%
+        margin-right: 10px
+        background: $blue
+        background-size: 100%
+
+      &:after
+        position: absolute
+        content: ""
+        display: block
+        width: 18px
+        height: 18px
+        background: url("../images/tick.svg") center no-repeat
+        top: 2px
+        left: 2px
+
   &__subTitle
     padding: 10px
     @include font($white, $mainFont, normal, 25px)
     text-transform: uppercase
+    margin-bottom: 40px
 
 .logo
   margin-right: 50px
