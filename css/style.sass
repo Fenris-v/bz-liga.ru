@@ -3,6 +3,10 @@
 /* RESET */
 @import "min-reset"
 
+body
+  max-width: 1920px
+  margin: 0 auto
+
 /* HEADER */
 .logo_bold
   font-weight: bolder
@@ -41,8 +45,8 @@
     display: inline-block
 
   &__wrapper
-    background: url(../images/bg_main.jpg) center -310px no-repeat
-    background-size: 100%, contain
+    background: url(../images/bg_main.jpg) center center no-repeat
+    background-size: 100%, cover
 
   &_fixed
     transform: translateY(-100%)
@@ -105,6 +109,7 @@
 
 .logo
   margin-right: 50px
+  display: flex
 
 .btn_blue
   padding: 0 20px
@@ -345,10 +350,433 @@
   a
     margin-bottom: 30px
 
-  &__smallText
+.smallText
+  margin: 0 auto 20px
+  max-width: 600px
+  @include font($white, $mainFont, normal, 12px)
+
+.s_rates
+  margin-bottom: 20px
+
+.rates
+
+  h2
+    text-transform: uppercase
+    text-align: center
+    padding-top: 40px
+    @include font($textBlack, $mainFont, bold, 42px, 1.4)
+    margin-bottom: 40px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+
+  p
+    text-align: center
+    @include font($textBlack, $mainFont, normal, $fontSize)
+
+.rate
+  width: 32%
+  position: relative
+
+  &__title
+    height: 130px
+
+    &_first
+      background: rgb(183,183,183)
+      background: linear-gradient(200deg, rgba(183,183,183,1) 40%, rgba(222,222,222,0.7) 100%)
+
+      h3
+        color: $textBlack !important
+
+    &_second
+      background: rgb(77,77,77)
+      background: linear-gradient(200deg, rgba(77,77,77,1) 40%, rgba(99,99,99,0.7) 100%)
+
+    &_third
+      background: rgb(11, 77, 197)
+      background: linear-gradient(200deg, rgba(11, 77, 197, 1) 40%, rgba(94, 120, 249, 1) 100%)
+
+    h3
+      text-transform: uppercase
+      text-align: center
+      padding-top: 20px
+      @include font($white, $mainFont, bold, 28px, 1.2)
+
+  &__price
+    position: relative
+    +transform(translateY(-50%))
+    text-align: center
+
+    &__text
+      position: absolute
+      top: 50%
+      left: 50%
+      +transform(translate(-50%, -50%))
+      text-align: center
+      @include font($textBlack, $mainFont, bold, 25px, 1.2)
+
+  &__list
+    margin-top: -50px
+    height: 480px
+
+    li
+      display: flex
+      align-items: center
+      min-height: 40px
+      border-bottom: 1px solid $grey
+      @include font($textBlack, $mainFont, normal, $fontSize, 1.2)
+
+      &:last-child
+        border: none
+
+      span
+        font-weight: bold
+
+  &__total
+    text-align: right
+    position: relative
+    padding: 20px 5px 10px
+    margin-bottom: 10px
+
+    &__bg
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%)
+      -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%)
+
+      &_first
+        background: rgb(183,183,183)
+        background: linear-gradient(200deg, rgba(183,183,183,1) 40%, rgba(222,222,222,1) 100%)
+
+      &_second
+        background: rgb(77,77,77)
+        background: linear-gradient(200deg, rgba(77,77,77,1) 40%, rgba(99,99,99,0.7) 100%)
+
+      &_third
+        background: rgb(11, 77, 197)
+        background: linear-gradient(200deg, rgba(11, 77, 197, 1) 40%, rgba(94, 120, 249, 1) 100%)
+
+    &__oldPrice
+      display: inline
+      position: relative
+      @include font($white, $mainFont, normal, 27px, 1.2)
+      text-shadow: #4b4b4b 3px 0 2px
+
+      &_first
+        text-shadow: none
+        color: $textBlack
+
+      &_third
+        text-shadow: $blue 3px 0 2px
+
+      &:before
+        position: absolute
+        width: 100%
+        height: 50%
+        content: ''
+        border-bottom: 2px solid $red
+        transform: rotate(3deg)
+
+
+    &__newPrice
+      position: relative
+      @include font($white, $mainFont, bold, 30px, 1.2)
+      text-shadow: #4b4b4b 3px 0 2px
+
+      &_first
+        text-shadow: none
+        color: $textBlack
+
+      &_third
+        text-shadow: $blue 3px 0 2px
+
+
+  &__accept
+    text-align: center
+
+
+.s_why
+  background: url("../images/innovation.jpg") center no-repeat
+  background-size: cover
+  margin-bottom: 40px
+
+.why
+
+  h2
+    text-transform: uppercase
+    text-align: center
+    padding-top: 40px
+    @include font($white, $mainFont, bold, 42px, 1.4)
+
+  h3
+    text-align: center
+    @include font($white, $mainFont, normal, 25px)
+    margin-bottom: 40px
+
+  &__list
+    margin-bottom: 40px
+
+  &__item
+    max-width: 900px
     margin: 0 auto 20px
+    display: flex
+    align-items: center
+
+  &__icon
+    margin-right: 30px
+
+  &__desc
+    @include font($white, $mainFont, normal, $fontSize, 1.2)
     max-width: 600px
-    @include font($white, $mainFont, normal, 12px)
+
+    h4
+      font-weight: bold
+
+  &__bottomTitle
+    text-align: center
+    @include font($white, $mainFont, bold, 22px, 1.3)
+    margin-bottom: 40px
+
+  &_bottom
+    text-align: center
+
+    a
+      margin-bottom: 40px
+
+    p
+      margin-bottom: 50px
+
+.s_about
+  margin-bottom: 50px
+
+.about
+  max-width: 900px
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    @include font($textBlack, $arialHelvetica, bold, 42px, 1.4)
+
+  hr
+    max-width: 480px
+    border: none
+    height: 6px
+    background: $blue
+    margin: 0 auto 10px
+
+  p
+    @include font($textBlack, $mainFont, normal, $fontSize, 1.2)
+    margin-bottom: 20px
+    text-align: justify
+
+    &:last-child
+      margin-bottom: 0
+
+.s_team
+  background: url("../images/office.jpg") center no-repeat
+  margin-bottom: 30px
+
+  &_blur
+    width: 100%
+    height: 100%
+    background: rgb(0, 0, 0, 0.8)
+
+.team
+  padding-top: 40px
+  text-align: center
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    @include font($white, $arialHelvetica, bold, 42px, 1.4)
+    margin-bottom: 40px
+
+  &__container
+    max-width: 900px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    width: 30%
+    text-align: center
+    margin-bottom: 20px
+
+    &:last-child
+      margin-bottom: 40px
+
+    &__icon
+      margin-bottom: 10px
+
+    p
+      text-transform: uppercase
+      @include font($white, $mainFont, bold, 19px, 1.1)
+
+  &__bottomTitle
+    text-align: center
+    text-transform: uppercase
+    @include font($white, $arialHelvetica, bold, 30px)
+    margin-bottom: 30px
+
+  a
+    margin-bottom: 40px
+
+  p
+    margin-bottom: 40px
+
+.s_feedback
+  margin-bottom: 50px
+
+.feedback
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    @include font($textBlack, $arialHelvetica, bold, 42px, 1.4)
+    margin-bottom: 30px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    width: 49%
+    margin-bottom: 30px
+
+    &_top
+      display: flex
+      justify-content: space-between
+
+      img
+        width: 40%
+
+    &__who
+      width: 58%
+
+    &__name
+      @include font($textBlack, $arialHelvetica, bold, 30px, 1.1)
+      margin-bottom: 30px
+
+    &__store
+      @include font($textBlack, $mainFont, normal, 14px)
+
+    hr
+      border: none
+      height: 6px
+      background: $blue
+      margin: 15px 0 10px
+
+    &_bottom
+      @include font($textBlack, $mainFont, normal, $fontSize, 1.3)
+      background: $grey
+      padding: 10px
+
+.s_map
+  background: url("../images/background.jpg") center no-repeat
+  position: relative
+
+  &_blur
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgb(0, 0, 0, 0.8)
+
+.map
+  padding-top: 20px
+
+  &__container
+    margin-bottom: 50px
+    display: flex
+    justify-content: space-between
+
+  &_half
+    width: 49%
+
+    p
+      position: relative
+      display: flex
+      align-items: center
+      @include font($white, $mainFont, normal, $navSize)
+      margin-bottom: 20px
+
+      &:before
+        content: url("../images/icons/home.png")
+        width: 22px
+        height: 22px
+        position: relative
+        margin-right: 10px
+
+    iframe
+      position: relative
+      width: 100%
+      height: 350px
+
+  &_bottom
+    position: relative
+    text-align: center
+
+    .bigText
+      text-align: center
+      position: relative
+      @include font($white, $mainFont, 200, 22px, 1.2)
+      margin-bottom: 40px
+
+    a
+      margin-bottom: 30px
+
+    .smallText
+      margin-bottom: 50px
+
+/* FOOTER */
+.footer
+  background: #262626
+
+  &__logo a
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    svg
+      margin-right: 10px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__title
+    @include font($white, $arialHelvetica, bold, 30px, 1.1)
+    text-transform: uppercase
+
+  p
+    display: flex
+    align-items: center
+    @include font($white, $mainFont, 200, 14px)
+
+    &:before
+      content: url("../images/icons/home.png")
+      width: 22px
+      height: 22px
+      margin-right: 10px
+
+  .phone
+    display: flex
+    align-items: center
+    @include font($white, $mainFont, 200, 14px)
+
+    &:before
+      content: url("../images/icons/phone.png")
+      width: 22px
+      height: 22px
+      margin-right: 10px
 
 /* RESPONSIVE */
 @import "responsive"
