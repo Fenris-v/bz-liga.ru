@@ -555,6 +555,7 @@ body
   margin-bottom: 50px
 
 .about
+  margin: 0 auto
   max-width: 900px
 
   h2
@@ -601,6 +602,7 @@ body
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    margin: 0 auto
 
   &__item
     width: 30%
@@ -612,6 +614,7 @@ body
 
     &__icon
       margin-bottom: 10px
+      height: 65px
 
     p
       text-transform: uppercase
@@ -759,7 +762,7 @@ body
   p
     display: flex
     align-items: center
-    @include font($white, $mainFont, 200, 14px)
+    @include font($white, $mainFont, 200, 14px, 22px)
 
     &:before
       content: url("../images/icons/home.png")

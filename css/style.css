@@ -912,6 +912,7 @@ body {
 }
 
 .about {
+  margin: 0 auto;
   max-width: 900px;
 }
 .about h2 {
@@ -972,6 +973,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 .team__item {
   width: 30%;
@@ -983,6 +985,7 @@ body {
 }
 .team__item__icon {
   margin-bottom: 10px;
+  height: 65px;
 }
 .team__item p {
   text-transform: uppercase;
@@ -1173,7 +1176,7 @@ body {
   font-weight: 200;
   font-family: roboto, sans-serif;
   color: #ffffff;
-  line-height: 1;
+  line-height: 22px;
 }
 .footer p:before {
   content: url("../images/icons/home.png");
