@@ -221,7 +221,7 @@ body {
 }
 .header__wrapper {
   background: url(../images/bg_main.jpg) center center no-repeat;
-  background-size: 100%, cover;
+  background-size: cover;
 }
 .header_fixed {
   transform: translateY(-100%);
@@ -601,8 +601,8 @@ body {
 }
 
 .s_toWhom {
-  background: url("../images/bg-whom.jpg") top no-repeat;
-  background-size: 100%, contain;
+  background: url("../images/bg-whom.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .toWhom {
@@ -1096,6 +1096,7 @@ body {
 .s_map {
   background: url("../images/background.jpg") center no-repeat;
   position: relative;
+  background-size: cover;
 }
 .s_map_blur {
   position: absolute;
@@ -1219,10 +1220,430 @@ body {
 }
 
 /* RESPONSIVE */
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
 @media only screen and (max-width: 1200px) {
   .wrapper {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .individual__circle_leftTop__text {
+    width: 220px;
+    left: -230px;
+    top: 0;
+  }
+
+  .individual__circle_rightTop__text {
+    width: 220px;
+    right: -230px;
+    top: 0;
+  }
+
+  .individual__circle_leftMiddle__text {
+    width: 220px;
+    left: -230px;
+  }
+
+  .individual__circle_rightMiddle__text {
+    width: 220px;
+    right: -230px;
+  }
+
+  .individual__circle_leftBottom__text {
+    width: 220px;
+    left: -230px;
+  }
+
+  .individual__circle_rightBottom__text {
+    width: 220px;
+    right: -230px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__phone {
+    margin-right: 70px;
+  }
+
+  .header_bottom h1 {
+    font-size: 35px;
+  }
+
+  .individual h2 {
+    font-size: 28px;
+  }
+
+  .individual__circle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .individual__circle__text {
+    display: none;
+  }
+
+  .individual__circle_leftTop__text,
+.individual__circle_rightTop__text,
+.individual__circle_leftMiddle__text,
+.individual__circle_rightMiddle__text,
+.individual__circle_leftBottom__text,
+.individual__circle_rightBottom__text {
+    position: static;
+    width: 80%;
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    text-align: justify;
+  }
+
+  .individual__circle_leftTop__icon,
+.individual__circle_rightTop__icon,
+.individual__circle_leftMiddle__icon,
+.individual__circle_rightMiddle__icon,
+.individual__circle_leftBottom__icon,
+.individual__circle_rightBottom__icon {
+    position: static;
+    width: 40px;
+    height: 40px;
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    border: none;
+  }
+
+  .individual__circle svg {
+    display: none;
+  }
+
+  .individual__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 49%;
+    margin-bottom: 20px;
+  }
+
+  .toWhom h2 {
+    font-size: 28px;
+  }
+  .toWhom h3 {
+    font-size: 22px;
+  }
+
+  .toWhom__men__title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .rates h2 {
+    font-size: 28px;
+  }
+
+  .rate__title h3 {
+    font-size: 20px;
+  }
+  .rate__total__oldPrice {
+    font-size: 20px;
+  }
+  .rate__total__newPrice {
+    font-size: 22px;
+  }
+
+  .why h2 {
+    font-size: 28px;
+  }
+  .why__bottomTitle {
+    font-size: 18px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .team h2 {
+    font-size: 28px;
+  }
+  .team__item p {
+    font-size: 16px;
+  }
+  .team__bottomTitle {
+    font-size: 25px;
+  }
+
+  .feedback h2 {
+    font-size: 28px;
+  }
+  .feedback__item__name {
+    font-size: 25px;
+  }
+
+  .map__container {
+    flex-wrap: wrap;
+  }
+  .map_half {
+    width: 100%;
+  }
+  .map_half:first-child {
+    margin-bottom: 30px;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+  .footer__wrapper p {
+    margin-bottom: 10px;
+  }
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header_top {
+    margin-bottom: 20px;
+  }
+
+  .header_bottom h1 {
+    font-size: 25px;
+  }
+  .header_bottom li {
+    margin-bottom: 20px;
+  }
+
+  .header__subTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .rates__container {
+    flex-wrap: wrap;
+  }
+
+  .rate {
+    width: 49%;
+    margin-bottom: 30px;
+  }
+  .rate:last-child {
+    margin: 0 auto;
+  }
+
+  .why h2 {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .header_top {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .header_top .logo {
+    margin: 0 0 20px;
+  }
+
+  .header__phone {
+    margin: 0;
+  }
+
+  .header_bottom h1 {
+    font-size: 20px;
+  }
+  .header_bottom li {
+    display: inline-block;
+  }
+  .header_bottom li:before {
+    display: inline-block;
+  }
+
+  .header__subTitle {
+    font-size: 18px;
+    padding-bottom: 0;
+  }
+
+  .s_individual {
+    margin-bottom: 20px;
+  }
+
+  .individual h2 {
+    padding-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .individual__circle {
+    display: block;
+  }
+  .individual__item {
+    width: 100%;
+  }
+
+  .toWhom h2 {
+    padding-top: 25px;
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+  .toWhom__men {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .toWhom__men li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .toWhom__men__title {
+    font-size: 18px;
+    height: auto;
+  }
+  .toWhom h3 {
+    padding-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .toWhom a {
+    margin-bottom: 20px;
+  }
+
+  .rates h2 {
+    padding-top: 20px;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .rate {
+    width: 100%;
+  }
+  .rate__title {
+    height: 115px;
+  }
+  .rate__list {
+    margin-top: -70px;
+    height: auto;
+  }
+
+  .s_why {
+    margin-bottom: 20px;
+  }
+
+  .why h2 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .why__icon {
+    margin: 0 0 5px;
+  }
+  .why__item {
+    flex-direction: column;
+  }
+  .why__item h4 {
+    text-align: center;
+  }
+  .why__item p {
+    text-align: justify;
+  }
+  .why__bottomTitle {
+    margin-bottom: 20px;
+  }
+  .why_bottom a, .why_bottom p {
+    margin-bottom: 20px;
+  }
+
+  .s_about {
+    margin-bottom: 30px;
+  }
+
+  .about h2 {
+    font-size: 20px;
+  }
+
+  .s_team {
+    margin-bottom: 20px;
+  }
+
+  .team {
+    padding-top: 20px;
+  }
+  .team h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .team__item {
+    width: 49%;
+  }
+  .team__item p {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .team__item:last-child {
+    margin-bottom: 20px;
+  }
+  .team__bottomTitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .team a, .team p {
+    margin-bottom: 20px;
+  }
+
+  .s_feedback {
+    margin: 0;
+  }
+
+  .feedback h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .feedback__item {
+    width: 100%;
+  }
+  .feedback__item__name {
+    font-size: 18px;
+  }
+
+  .map__container {
+    margin-bottom: 20px;
+  }
+  .map_half p {
+    font-size: 16px;
+  }
+  .map_bottom a {
+    margin-bottom: 20px;
+  }
+  .map_bottom .bigText {
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .map_bottom .smallText {
+    margin-bottom: 20px;
+  }
+
+  .footer__logo .logo {
+    text-align: center;
+    margin: 0;
+  }
+  .footer__title {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .rate__list li:first-child {
+    display: block;
   }
 }
 /* HAMBURGER */
