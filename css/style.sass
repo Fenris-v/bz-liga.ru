@@ -3,6 +3,8 @@
 /* RESET */
 @import "min-reset"
 
+
+
 body
   max-width: 1920px
   margin: 0 auto
@@ -20,6 +22,13 @@ body
   padding: 20px 0
 
 .header
+
+  &_top
+    margin-bottom: 60px
+
+  .wrapper
+    max-width: 1000px
+
   &__nav
     flex-grow: 1
 
@@ -63,12 +72,12 @@ body
       background-color: $blue
       padding: 10px
       text-transform: uppercase
-      @include font($white, $arialHelvetica, bold, 38px)
+      @include font($white, $arialHelvetica, 900, 38px)
       display: inline-block
 
     li
       @include font($white, $mainFont, normal, $navSize, 24px)
-      margin-bottom: 20px
+      margin-bottom: 30px
       display: flex
       align-items: flex-start
       position: relative
@@ -133,7 +142,9 @@ body
   h2
     padding-top: 40px
     @include font($textBlack, $mainFont, bold, 42px, 1.4)
-    margin-bottom: 40px
+    text-transform: uppercase
+    max-width: 1000px
+    margin: 0 auto 40px
 
   &__circle
     display: inline-block
@@ -166,7 +177,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 
 .individual__circle_leftTop__icon
@@ -191,7 +202,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 .individual__circle_rightTop__icon
   position: absolute
@@ -215,7 +226,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 .individual__circle_leftMiddle__icon
   position: absolute
@@ -240,7 +251,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 .individual__circle_rightMiddle__icon
   position: absolute
@@ -266,7 +277,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 .individual__circle_leftBottom__icon
   position: absolute
@@ -290,7 +301,7 @@ body
     @include font($textBlack, $mainFont, bold, $fontSize, 20px)
 
   p
-    @include font($textBlack, $mainFont, normal, $fontSize, 20px)
+    @include font($textBlack, $mainFont, 300, $fontSize, 20px)
 
 .individual__circle_rightBottom__icon
   position: absolute
@@ -313,7 +324,7 @@ body
   h2
     text-align: center
     padding-top: 40px
-    @include font($white, $mainFont, bold, 42px, 1.4)
+    @include font($white, $argentum, 900, 42px, 1.4)
     margin-bottom: 40px
 
   &__men
@@ -341,11 +352,12 @@ body
     text-transform: uppercase
     text-align: center
     padding-top: 40px
-    @include font($white, $mainFont, bold, 30px, 1.2)
+    @include font($white, $argentum, 900, 30px, 1.2)
     margin-bottom: 40px
 
     span
       font-weight: normal
+      font-family: $mainFont
 
   a
     margin-bottom: 30px
@@ -364,7 +376,7 @@ body
     text-transform: uppercase
     text-align: center
     padding-top: 40px
-    @include font($textBlack, $mainFont, bold, 42px, 1.4)
+    @include font($textBlack, $argentum, 900, 42px, 1.4)
     margin-bottom: 40px
 
   &__container
@@ -402,7 +414,7 @@ body
       text-transform: uppercase
       text-align: center
       padding-top: 20px
-      @include font($white, $mainFont, bold, 28px, 1.2)
+      @include font($white, $argentum, 900, 28px, 1.2)
 
   &__price
     position: relative
@@ -511,7 +523,7 @@ body
     text-transform: uppercase
     text-align: center
     padding-top: 40px
-    @include font($white, $mainFont, bold, 42px, 1.4)
+    @include font($white, $argentum, 900, 42px, 1.4)
 
   h3
     text-align: center
@@ -561,7 +573,7 @@ body
   h2
     text-align: center
     text-transform: uppercase
-    @include font($textBlack, $arialHelvetica, bold, 42px, 1.4)
+    @include font($textBlack, $argentum, 900, 42px, 1.4)
 
   hr
     max-width: 480px
@@ -594,7 +606,7 @@ body
   h2
     text-align: center
     text-transform: uppercase
-    @include font($white, $arialHelvetica, bold, 42px, 1.4)
+    @include font($white, $argentum, 900, 42px, 1.4)
     margin-bottom: 40px
 
   &__container
@@ -623,7 +635,7 @@ body
   &__bottomTitle
     text-align: center
     text-transform: uppercase
-    @include font($white, $arialHelvetica, bold, 30px)
+    @include font($white, $argentum, 900, 30px)
     margin-bottom: 30px
 
   a
@@ -640,7 +652,7 @@ body
   h2
     text-align: center
     text-transform: uppercase
-    @include font($textBlack, $arialHelvetica, bold, 42px, 1.4)
+    @include font($textBlack, $argentum, 900, 42px, 1.4)
     margin-bottom: 30px
 
   &__container
@@ -663,7 +675,7 @@ body
       width: 58%
 
     &__name
-      @include font($textBlack, $arialHelvetica, bold, 30px, 1.1)
+      @include font($textBlack, $argentum, 900, 30px, 1.1)
       margin-bottom: 30px
 
     &__store
@@ -741,6 +753,7 @@ body
 /* FOOTER */
 .footer
   background: #262626
+  padding-top: 5px
 
   &__logo a
     display: flex
@@ -756,7 +769,7 @@ body
     align-items: center
 
   &__title
-    @include font($white, $arialHelvetica, bold, 30px, 1.1)
+    @include font($white, $argentum, 900, 30px, 1.1)
     text-transform: uppercase
 
   p

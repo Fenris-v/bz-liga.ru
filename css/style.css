@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
 /* RESET */
 a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt,
 em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li,
@@ -165,6 +173,12 @@ body {
   padding: 20px 0;
 }
 
+.header_top {
+  margin-bottom: 60px;
+}
+.header .wrapper {
+  max-width: 1000px;
+}
 .header__nav {
   flex-grow: 1;
 }
@@ -216,14 +230,14 @@ body {
   width: 100%;
 }
 .header_fixed .header__nav a, .header_fixed .header__phone {
-  color: #000000;
+  color: #333333;
 }
 .header_bottom h1 {
   background-color: #0b4dc5;
   padding: 10px;
   text-transform: uppercase;
   font-size: 38px;
-  font-weight: bold;
+  font-weight: 900;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   color: #ffffff;
   line-height: 1;
@@ -235,7 +249,7 @@ body {
   font-family: roboto, sans-serif;
   color: #ffffff;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -314,9 +328,11 @@ body {
   font-size: 42px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1.4;
-  margin-bottom: 40px;
+  text-transform: uppercase;
+  max-width: 1000px;
+  margin: 0 auto 40px;
 }
 .individual__circle {
   display: inline-block;
@@ -342,7 +358,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1;
 }
 
@@ -358,14 +374,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_leftTop__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -396,14 +412,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_rightTop__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -434,14 +450,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_leftMiddle__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -477,14 +493,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_rightMiddle__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -520,14 +536,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_leftBottom__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -558,14 +574,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 .individual__circle_rightBottom__text p {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 20px;
 }
 
@@ -596,8 +612,8 @@ body {
   text-align: center;
   padding-top: 40px;
   font-size: 42px;
-  font-weight: bold;
-  font-family: roboto, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.4;
   margin-bottom: 40px;
@@ -638,14 +654,15 @@ body {
   text-align: center;
   padding-top: 40px;
   font-size: 30px;
-  font-weight: bold;
-  font-family: roboto, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 40px;
 }
 .toWhom h3 span {
   font-weight: normal;
+  font-family: roboto, sans-serif;
 }
 .toWhom a {
   margin-bottom: 30px;
@@ -670,9 +687,9 @@ body {
   text-align: center;
   padding-top: 40px;
   font-size: 42px;
-  font-weight: bold;
-  font-family: roboto, sans-serif;
-  color: #000000;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
+  color: #333333;
   line-height: 1.4;
   margin-bottom: 40px;
 }
@@ -686,7 +703,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1;
 }
 
@@ -702,7 +719,7 @@ body {
   background: linear-gradient(200deg, #b7b7b7 40%, rgba(222, 222, 222, 0.7) 100%);
 }
 .rate__title_first h3 {
-  color: #000000 !important;
+  color: #333333 !important;
 }
 .rate__title_second {
   background: #4d4d4d;
@@ -717,8 +734,8 @@ body {
   text-align: center;
   padding-top: 20px;
   font-size: 28px;
-  font-weight: bold;
-  font-family: roboto, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.2;
 }
@@ -744,7 +761,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1.2;
 }
 .rate__list {
@@ -759,7 +776,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1.2;
 }
 .rate__list li:last-child {
@@ -807,7 +824,7 @@ body {
 }
 .rate__total__oldPrice_first {
   text-shadow: none;
-  color: #000000;
+  color: #333333;
 }
 .rate__total__oldPrice_third {
   text-shadow: #0b4dc5 3px 0 2px;
@@ -831,7 +848,7 @@ body {
 }
 .rate__total__newPrice_first {
   text-shadow: none;
-  color: #000000;
+  color: #333333;
 }
 .rate__total__newPrice_third {
   text-shadow: #0b4dc5 3px 0 2px;
@@ -851,8 +868,8 @@ body {
   text-align: center;
   padding-top: 40px;
   font-size: 42px;
-  font-weight: bold;
-  font-family: roboto, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.4;
 }
@@ -919,9 +936,9 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  color: #000000;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
+  color: #333333;
   line-height: 1.4;
 }
 .about hr {
@@ -935,7 +952,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1.2;
   margin-bottom: 20px;
   text-align: justify;
@@ -962,8 +979,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.4;
   margin-bottom: 40px;
@@ -999,8 +1016,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1;
   margin-bottom: 30px;
@@ -1020,9 +1037,9 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  color: #000000;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
+  color: #333333;
   line-height: 1.4;
   margin-bottom: 30px;
 }
@@ -1047,9 +1064,9 @@ body {
 }
 .feedback__item__name {
   font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  color: #000000;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
+  color: #333333;
   line-height: 1.1;
   margin-bottom: 30px;
 }
@@ -1057,7 +1074,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1;
 }
 .feedback__item hr {
@@ -1070,7 +1087,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: roboto, sans-serif;
-  color: #000000;
+  color: #333333;
   line-height: 1.3;
   background: #d9d9d9;
   padding: 10px;
@@ -1147,6 +1164,7 @@ body {
 /* FOOTER */
 .footer {
   background: #262626;
+  padding-top: 5px;
 }
 .footer__logo a {
   display: flex;
@@ -1163,8 +1181,8 @@ body {
 }
 .footer__title {
   font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 900;
+  font-family: Argentum, sans-serif;
   color: #ffffff;
   line-height: 1.1;
   text-transform: uppercase;
@@ -1208,6 +1226,14 @@ body {
   }
 }
 /* HAMBURGER */
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
+@font-face {
+  font-family: Argentum;
+  src: url(../fonts/ArgentumSans-Black.ttf);
+}
 .adaptive-menu-toggle {
   display: block;
   width: 30px;
