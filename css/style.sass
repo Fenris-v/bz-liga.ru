@@ -21,6 +21,11 @@ body
   align-items: center
   padding: 20px 0
 
+.header_fixed__wrapper
+  padding: 20px 15px
+  max-width: 1000px
+  margin: 0 auto
+
 .header
 
   &_top
@@ -45,7 +50,7 @@ body
       @include box-sizing()
 
       &:hover
-        color: $blue
+        color: $blue !important
         +transition()
 
   &__phone
@@ -61,7 +66,13 @@ body
     transform: translateY(-100%)
     position: fixed
     background: $white
+    z-index: 5
     width: 100%
+    @include transition()
+
+    &.header_fixed_show
+      transform: translateY(0) !important
+      @include transition()
 
     .header__nav a, .header__phone
       color: $textBlack
@@ -794,6 +805,83 @@ body
       width: 22px
       height: 22px
       margin-right: 10px
+
+/* MODAL */
+.modal
+  display: none
+
+.fancybox-scroll-disable
+  overflow: hidden
+
+.fancybox-bg
+  background: $textBlack
+
+.fancybox-button svg
+  color: $white
+
+.modal-success
+  max-width: 400px
+  padding: 30px
+  width: 100%
+  background: rgb(11, 77, 197)
+  background: linear-gradient(200deg, rgba(11, 77, 197, 1) 40%, rgba(94, 120, 249, 1) 100%)
+  text-align: center
+
+.modal-success__title
+  @include font($white, $argentum, 900, 20px, 1.1)
+  margin-bottom: 20px
+  text-transform: uppercase
+
+.modal-success__description
+  @include font($white, $mainFont, 300, 14px, 1.1)
+
+.modal-success
+
+  ul
+    padding-top: 20px
+
+  li
+    position: relative
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 30px
+
+  input
+    width: 100%
+    outline: none
+
+    &[type='text']
+      @include font($white, $mainFont, normal, $fontSize, 40px)
+      padding: 0 10px 0 30px
+      background: transparent
+      border: 2px solid $white
+
+    &[type='submit']
+      @include font($textBlack, $mainFont, normal, $fontSize, 40px)
+      height: 40px
+      border: none
+      @include transition()
+
+      &:hover
+        cursor: pointer
+        background: $textBlack
+        color: $white
+        @include transition()
+
+    &::placeholder
+      @include font($white, $mainFont, normal, $fontSize, 40px)
+
+  img
+    position: absolute
+    top: 50%
+    +transform(translateY(-50%))
+    left: 10px
+
+  &__phone
+    @include font($white, $arialHelvetica, bold, $navSize)
+
+
 
 /* RESPONSIVE */
 @import "responsive"

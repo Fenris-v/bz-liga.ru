@@ -10,6 +10,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <link href="#" rel="shortcut icon">
@@ -28,10 +29,10 @@
             </a>
             <div class="header__nav">
                 <ul>
-                    <li><a href="#">для кого</a></li>
-                    <li><a href="#">бизнес пакеты</a></li>
-                    <li><a href="#">о нас</a></li>
-                    <li><a href="#">отзывы</a></li>
+                    <li><a href="#toWhom">для кого</a></li>
+                    <li><a href="#business">бизнес пакеты</a></li>
+                    <li><a href="#about">о нас</a></li>
+                    <li><a href="#feedback">отзывы</a></li>
                 </ul>
             </div>
             <a href="#" class="header__phone">
@@ -53,10 +54,10 @@
                 </a>
                 <div class="header__nav">
                     <ul>
-                        <li><a href="#">для кого</a></li>
-                        <li><a href="#">бизнес пакеты</a></li>
-                        <li><a href="#">о нас</a></li>
-                        <li><a href="#">отзывы</a></li>
+                        <li><a href="#toWhom">для кого</a></li>
+                        <li><a href="#business">бизнес пакеты</a></li>
+                        <li><a href="#about">о нас</a></li>
+                        <li><a href="#feedback">отзывы</a></li>
                     </ul>
                 </div>
                 <a href="#" class="header__phone">
@@ -78,7 +79,7 @@
                     <li>Составление уникальной товарной матрицы</li>
                     <li>Обучение на всех этапах создания интернет-магазина</li>
                 </ul>
-                <a class="btn btn_blue" href="#">Узнать подробности</a>
+                <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Узнать подробности</a>
                 <img src="images/scroll.gif" alt="icon">
             </div>
         </div>
@@ -170,7 +171,7 @@
     </div>
 </section>
 
-<section class="s_toWhom">
+<section id="toWhom" class="s_toWhom">
     <div class="wrapper">
         <div class="toWhom">
             <h2>КОМУ ПОДОЙДЕТ НАШЕ ПРЕДЛОЖЕНИЕ?</h2>
@@ -207,7 +208,7 @@
                 <br/>
                 <span>И мы создадим для вас интернет магазин за 30 ДНЕЙ!</span>
             </h3>
-            <a class="btn btn_blue" href="#">Оставить заявку</a>
+            <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Оставить заявку</a>
             <p class="smallText">
                 *Данная заявка вас ни к чему не обязывает. Мы расскажем вам о нашем продукте. Ваши контактные данные не
                 будут переданы третьим лицам и мы не рассылаем спам.
@@ -216,7 +217,7 @@
     </div>
 </section>
 
-<section class="s_rates">
+<section id="business" class="s_rates">
     <div class="wrapper">
         <div class="rates">
             <h2>Бизнес пакеты для вас</h2>
@@ -259,7 +260,7 @@
                         </div>
                     </div>
                     <div class="rate__accept">
-                        <a class="btn btn_blue" href="#">Выбрать тариф</a>
+                        <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Выбрать тариф</a>
                     </div>
                 </div>
 
@@ -302,7 +303,7 @@
                         </div>
                     </div>
                     <div class="rate__accept">
-                        <a class="btn btn_blue" href="#">Выбрать тариф</a>
+                        <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Выбрать тариф</a>
                     </div>
                 </div>
 
@@ -346,7 +347,7 @@
                         </div>
                     </div>
                     <div class="rate__accept">
-                        <a class="btn btn_blue" href="#">Выбрать тариф</a>
+                        <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Выбрать тариф</a>
                     </div>
                 </div>
             </div>
@@ -519,7 +520,7 @@
                 ИЛИ ОСТАВЬТЕ ЗАЯВКУ, И НАШИ СПЕЦИАЛИСТЫ ПРОКОНСУЛЬТИРУЮТ ВАС
             </div>
             <div class="why_bottom">
-                <a class="btn btn_blue" href="#">Оставить заявку</a>
+                <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Оставить заявку</a>
                 <p class="smallText">
                     *Данная заявка вас ни к чему не обязывает. Мы расскажем вам о нашем продукте. Ваши контактные данные
                     не
@@ -530,7 +531,7 @@
     </div>
 </section>
 
-<section class="s_about">
+<section id="about" class="s_about">
     <div class="wrapper">
         <div class="about">
             <h2>
@@ -616,7 +617,7 @@
                 <div class="team__bottomTitle">
                     ВСЕ ЭТИ ЗНАНИЯ СТАНУТ ВАШИМИ!
                 </div>
-                <a class="btn btn_blue" href="#">Связаться с нами</a>
+                <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Связаться с нами</a>
                 <p class="smallText">
                     *Данная заявка вас ни к чему не обязывает. Мы расскажем вам о нашем продукте. Ваши контактные данные
                     не будут переданы третьим лицам и мы не рассылаем спам.
@@ -626,7 +627,7 @@
     </div>
 </section>
 
-<section class="s_feedback">
+<section id="feedback" class="s_feedback">
     <div class="wrapper">
         <div class="feedback">
             <h2>отзывы наших клиентов</h2>
@@ -751,7 +752,7 @@
                 <p class="bigText">Хватит смотреть, как проносится мимо вас жизнь с огромной кучей денег и теми
                     возможностями, которые деньги открывают. Сделайте свой первый шаг в мир бизнеса, и вы поймете, что
                     все не так сложно, как кажется...</p>
-                <a class="btn btn_blue" href="#">Оставить заявку</a>
+                <a class="btn btn_blue" href="#detailsModal" data-fancybox-modal>Оставить заявку</a>
                 <p class="smallText">Все риски связанные с работой интернет-магазина несет собственник
                     интернет-магазина.</p>
             </div>
@@ -775,6 +776,34 @@
         <a class="phone" href="#">8 (800) 500-41-96</a>
     </div>
 </footer>
+
+<div id="detailsModal" class="modal modal-success">
+    <div class="modal-success__title">узнайте подробнее <br/> о нашем предложении</div>
+    <div class="modal-success__description">Оставьте свои контакты и наш менеджер свяжется с Вами в ближайшее время.</div>
+    <form action="#" method="post">
+        <ul>
+            <li>
+                <label for="detailsName"></label>
+                <input id="detailsName" type="text" placeholder="Введите имя">
+                <img src="images/icons/name.png" alt="icon">
+            </li>
+            <li>
+                <label for="detailsPhone"></label>
+                <input id="detailsPhone" type="text" placeholder="Введите номер телефона">
+                <img src="images/icons/phone-mobile.png" alt="icon">
+            </li>
+            <li>
+                <input type="submit" value="Оставить заявку">
+            </li>
+        </ul>
+    </form>
+    <div class="modal-success__description">или позвоните по телефону</div>
+    <div class="modal-success__phone">8 (800) 500-41-96</div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
+<script src="js/scripts.js" type="text/javascript"></script>
 
 </body>
 
