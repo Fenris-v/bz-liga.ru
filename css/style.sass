@@ -132,7 +132,7 @@ body
   display: flex
 
 .btn_blue
-  padding: 0 20px
+  padding: 0 40px
   display: inline-block
   background: rgb(11, 77, 197)
   background: linear-gradient(200deg, rgba(11, 77, 197, 1) 40%, rgba(94, 120, 249, 1) 100%)
@@ -328,20 +328,20 @@ body
 .s_toWhom
   background: url("../images/bg-whom.jpg") center no-repeat
   background-size: cover
+  padding-bottom: 30px
 
 .toWhom
   text-align: center
 
   h2
     text-align: center
-    padding-top: 40px
+    padding-top: 80px
     @include font($white, $argentum, 900, 42px, 1.4)
-    margin-bottom: 40px
+    margin-bottom: 80px
 
   &__men
     display: flex
     justify-content: space-between
-    margin-bottom: 40px
 
     li
       width: 30%
@@ -362,7 +362,7 @@ body
   h3
     text-transform: uppercase
     text-align: center
-    padding-top: 40px
+    padding-top: 50px
     @include font($white, $argentum, 900, 30px, 1.2)
     margin-bottom: 40px
 
@@ -403,6 +403,9 @@ body
   width: 32%
   position: relative
 
+  &:nth-child(2n)
+    border: 1px solid $grey
+
   &__title
     height: 130px
 
@@ -416,6 +419,8 @@ body
     &_second
       background: rgb(77,77,77)
       background: linear-gradient(200deg, rgba(77,77,77,1) 40%, rgba(99,99,99,0.7) 100%)
+
+
 
     &_third
       background: rgb(11, 77, 197)
@@ -450,6 +455,7 @@ body
       min-height: 40px
       border-bottom: 1px solid $grey
       @include font($textBlack, $mainFont, normal, $fontSize, 1.2)
+      margin: 0 10px
 
       &:last-child
         border: none
