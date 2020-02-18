@@ -7,8 +7,12 @@
     padding-right: 30px
 
 @media only screen and (max-width: 1100px)
-  .individual h2
-    font-size: 40px
+  .individual
+    h2
+      font-size: 40px
+
+    h3, p
+      font-size: 15px
 
   .individual__circle_leftTop__text
     width: 220px
@@ -212,11 +216,15 @@
     margin: 0
 
   .header_bottom
+    text-align: center
+
     h1
       font-size: 20px
+      text-align: left
 
     li
       display: inline-block
+      text-align: left
 
       &:before
         display: inline-block
@@ -224,6 +232,7 @@
   .header__subTitle
     font-size: 18px
     padding-bottom: 0
+    text-align: left
 
   .s_individual
     margin-bottom: 20px
@@ -240,6 +249,16 @@
     &__item
       width: 100%
 
+  .individual__circle_leftTop__icon,
+  .individual__circle_leftMiddle__icon,
+  .individual__circle_leftBottom__icon
+    order: 1
+
+  .individual__circle_leftTop__text,
+  .individual__circle_leftMiddle__text,
+  .individual__circle_leftBottom__text
+    order: 2
+
   .toWhom
     h2
       padding-top: 25px
@@ -253,10 +272,12 @@
       li
         width: 100%
         margin-bottom: 20px
+        text-align: center
 
       &__title
         font-size: 18px
         height: auto
+        justify-content: center
 
     h3
       padding-top: 0

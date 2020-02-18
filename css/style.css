@@ -110,7 +110,6 @@ body {
   font-size: 16px;
   line-height: 1;
   min-width: 320px;
-  overflow-x: hidden;
 }
 
 a {
@@ -729,8 +728,13 @@ body {
   width: 32%;
   position: relative;
 }
-.rate:nth-child(2n) {
-  border: 1px solid #d9d9d9;
+.rate__border {
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
+.rate__border .rate__total {
+  margin: 0;
 }
 .rate__title {
   height: 130px;
@@ -791,6 +795,7 @@ body {
 }
 .rate__list li {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 40px;
   border-bottom: 1px solid #d9d9d9;
@@ -800,6 +805,12 @@ body {
   color: #333333;
   line-height: 1.2;
   margin: 0 10px;
+}
+.rate__list li:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 .rate__list li:last-child {
   border: none;
@@ -1375,6 +1386,9 @@ body {
   .individual h2 {
     font-size: 40px;
   }
+  .individual h3, .individual p {
+    font-size: 15px;
+  }
 
   .individual__circle_leftTop__text {
     width: 220px;
@@ -1606,11 +1620,16 @@ body {
     margin: 0;
   }
 
+  .header_bottom {
+    text-align: center;
+  }
   .header_bottom h1 {
     font-size: 20px;
+    text-align: left;
   }
   .header_bottom li {
     display: inline-block;
+    text-align: left;
   }
   .header_bottom li:before {
     display: inline-block;
@@ -1619,6 +1638,7 @@ body {
   .header__subTitle {
     font-size: 18px;
     padding-bottom: 0;
+    text-align: left;
   }
 
   .s_individual {
@@ -1637,6 +1657,18 @@ body {
     width: 100%;
   }
 
+  .individual__circle_leftTop__icon,
+.individual__circle_leftMiddle__icon,
+.individual__circle_leftBottom__icon {
+    order: 1;
+  }
+
+  .individual__circle_leftTop__text,
+.individual__circle_leftMiddle__text,
+.individual__circle_leftBottom__text {
+    order: 2;
+  }
+
   .toWhom h2 {
     padding-top: 25px;
     font-size: 19px;
@@ -1649,10 +1681,12 @@ body {
   .toWhom__men li {
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
   }
   .toWhom__men__title {
     font-size: 18px;
     height: auto;
+    justify-content: center;
   }
   .toWhom h3 {
     padding-top: 0;

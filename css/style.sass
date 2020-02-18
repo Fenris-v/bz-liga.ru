@@ -403,8 +403,13 @@ body
   width: 32%
   position: relative
 
-  &:nth-child(2n)
-    border: 1px solid $grey
+  &__border
+    border-left: 1px solid $grey
+    border-right: 1px solid $grey
+    margin-bottom: 10px
+
+    .rate__total
+      margin: 0
 
   &__title
     height: 130px
@@ -419,8 +424,6 @@ body
     &_second
       background: rgb(77,77,77)
       background: linear-gradient(200deg, rgba(77,77,77,1) 40%, rgba(99,99,99,0.7) 100%)
-
-
 
     &_third
       background: rgb(11, 77, 197)
@@ -451,11 +454,18 @@ body
 
     li
       display: flex
+      flex-wrap: wrap
       align-items: center
       min-height: 40px
       border-bottom: 1px solid $grey
       @include font($textBlack, $mainFont, normal, $fontSize, 1.2)
       margin: 0 10px
+
+      &:before
+        content: ""
+        display: inline-block
+        height: 100%
+        vertical-align: middle
 
       &:last-child
         border: none
